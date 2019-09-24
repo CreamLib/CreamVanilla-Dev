@@ -1,0 +1,5 @@
+{
+  "inputPath": "./components/*/*/*.md",
+  "outputPath": "_site/components/*/*/*.html",
+  "url": "/components/"
+}
