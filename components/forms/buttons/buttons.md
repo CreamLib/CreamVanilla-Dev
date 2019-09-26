@@ -1,6 +1,6 @@
 ---
-title: Buttons component.
-description: This is the button component.
+title: Buttons component
+description: This is the button component
 date: 2019-09-25
 tags:
   - components

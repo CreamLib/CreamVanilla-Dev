@@ -1,6 +1,6 @@
 ---
-title: datepicker component.
-description: This is the datepicker component.
+title: datepicker component
+description: This is the datepicker component
 date: 2019-09-25
 tags:
   - components

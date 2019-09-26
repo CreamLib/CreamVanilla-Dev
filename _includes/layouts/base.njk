@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ renderData.title or title or metadata.title }}</title>
+    <title>CreamJS - {{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
   </head>
@@ -14,15 +14,15 @@
 <header>
       <!-- Burger Button -->
       <button [ngClass]="{ burgerVertical: menuMobile, burgerHorizontal: !menuMobile }">
-        <img src="assets/img/burger.svg" alt="Mobile Button (Open Menu)" />
+        <img src="{{ '/assets/img/burger.svg' | url }}" alt="Mobile Button (Open Menu)" />
       </button>
 
       <!-- Logo -->
       <h1>
         <a href="/" class="logo">
           <picture>
-            <source srcset="{{ 'assets/img/creamJS-logo.svg' | url }}" media="(min-width:1000px)" />
-            <img src="{{ 'assets/img/creamNG-logo-sml.svg' | url }}" alt="Cream-NG, your accessible Angular Lib" />
+            <source srcset="{{ '/assets/img/creamJS-logo.svg' | url }}" media="(min-width:1000px)" />
+            <img src="{{ '/assets/img/creamNG-logo-sml.svg' | url }}" alt="Cream-NG, your accessible Angular Lib" />
           </picture>
         </a>
       </h1>
@@ -68,8 +68,8 @@
     </main>
 
   </div>
-  <script type="text/javascript" src="assets/js/main.js"></script>
-  <script type="text/javascript" src="assets/js/classlist-polyfill-IE.js"></script>
+  <script type="text/javascript" src="{{ '/assets/js/main.js' | url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/classlist-polyfill-IE.js' | url }}"></script>
 </body>
 
 

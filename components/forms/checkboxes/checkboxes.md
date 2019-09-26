@@ -1,6 +1,6 @@
 ---
-title: checkboxes component.
-description: This is the checkboxes component.
+title: checkboxes component
+description: This is the checkboxes component
 date: 2019-09-25
 tags:
   - components

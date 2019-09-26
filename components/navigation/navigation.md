@@ -3,7 +3,7 @@ layout: layouts/component.njk
 category: categories
 tags: navigation
 title: Navigation elements
-description: This is components for navigation elements.
+description: This is components for navigation elements
 ---
 
 <div class="wrapper">

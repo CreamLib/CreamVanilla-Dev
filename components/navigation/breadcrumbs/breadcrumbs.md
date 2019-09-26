@@ -1,6 +1,6 @@
 ---
-title: Breadcrumbs component.
-description: This is the breadcrumbs component.
+title: Breadcrumbs component
+description: This is the breadcrumbs component
 date: 2019-09-25
 tags:
   - components
