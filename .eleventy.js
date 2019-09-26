@@ -1,5 +1,4 @@
 module.exports = function (eleventyConfig) {
-
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addCollection('categories', collection => {
@@ -10,10 +9,25 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob('components/*/*/*.md');
   });
 
-  eleventyConfig.addJavaScriptFunction("searchCatMenu", function (a, b) {
-    return "ok boy"
-  });
+  return {
+    templateFormats: [
+      "md",
+      "njk",
+      "html",
+      "liquid"
+    ],
 
-  eleventyConfig.addFilter("slice", require("./filters/slice.js"));
-  eleventyConfig.addFilter("lookup", require("./filters/lookup.js"));
+    pathPrefix: "/creamJS/",
+
+    markdownTemplateEngine: "liquid",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
+    passthroughFileCopy: true,
+    dir: {
+      input: ".",
+      includes: "_includes",
+      data: "_data",
+      output: "_site"
+    }
+  };
 };

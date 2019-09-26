@@ -1,11 +1,11 @@
 ---
-layout: layout
-category: components
-title: Breadcrumbs
-tags: navigation
-permalink: '/components/navigation/breadcrumbs/breadcrumbs.html'
+title: Breadcrumbs component.
+description: This is the breadcrumbs component.
+date: 2019-09-25
+tags:
+  - components
+  - navigation
+layout: layouts/component.njk
 ---
-
-<div class="wrapper">
-  <h3>Breadcrumbs index</h3>
-</div>
+<h2>Buttons</h2>
+<p>This is the bredcrumb component with vanilla JS</p>

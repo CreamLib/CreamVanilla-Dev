@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ renderData.title or title or metadata.title }}</title>
+    <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+  </head>
+
+
+<body>
+  <div id="wrapper">
+<header>
+      <!-- Burger Button -->
+      <button [ngClass]="{ burgerVertical: menuMobile, burgerHorizontal: !menuMobile }">
+        <img src="assets/img/burger.svg" alt="Mobile Button (Open Menu)" />
+      </button>
+
+      <!-- Logo -->
+      <h1>
+        <a href="/" class="logo">
+          <picture>
+            <source srcset="{{ 'assets/img/creamJS-logo.svg' | url }}" media="(min-width:1000px)" />
+            <img src="{{ 'assets/img/creamNG-logo-sml.svg' | url }}" alt="Cream-NG, your accessible Angular Lib" />
+          </picture>
+        </a>
+      </h1>
+
+      <!-- MENU -->
+      <nav class="primary-nav">
+        <ul class="accordion">
+          {%- for category in collections.categories -%}
+          <li class="menu-group closed">
+
+            <button class="panel-heading" aria-expanded="false" aria-controls="sousMenu{{category.data.tags[0]}}"
+              id="itemMenu{{category.data.tags[0]}}">
+              <svg>
+                <use xlink:href="assets/img/icons.svg#{{category.data.tags[0]}}"></use>
+              </svg>
+              {{ category.data.title }}
+            </button>
+
+            <div class="panel-collapse" aria-hidden="true" id="sousMenu{{category.data.tags[0]}}"
+              aria-labeledby="itemMenu{{category.data.tags[0]}}">
+              <ul class="contenuMenu">
+                {%- for component in collections.components -%}
+                {%- if component.data.tags[1] == category.data.tags[0] %}
+                <li>
+                  <a href="{{ component.url | url }}">{{ component.data.title }}</a>
+                </li>
+                {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+
+          </li>
+          {%- endfor -%}
+
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contentMain">
+        {{ content | safe }}
+      </div>
+    </main>
+
+  </div>
+  <script type="text/javascript" src="assets/js/main.js"></script>
+  <script type="text/javascript" src="assets/js/classlist-polyfill-IE.js"></script>
+</body>
+
+
+</html>
