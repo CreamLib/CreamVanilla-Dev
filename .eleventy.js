@@ -33,7 +33,11 @@ module.exports = function (eleventyConfig) {
       "liquid"
     ],
 
+    /* GitHub prefix: */
     pathPrefix: "/creamJS/",
+
+    /* Localhost prefix: */
+    /* pathPrefix: "/", */
 
     markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "njk",
