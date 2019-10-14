@@ -422,17 +422,18 @@ div.code-ex {
 
 /* *********** PANEL TITLE ************* */
 
-.panelTitle {
-  margin-bottom: 10vh;
-  border-top: 1px solid var(--body-bg);
-}
-
-.panelTitle h2 {
+.contentMain > h2 {
   font: 1.2em var(--stack);
   color: var(--text-inv);
   background-color: var(--main-color);
   padding: 0.5em 5%;
+  margin: 2rem 5% 0;
   margin-bottom: 1em;
+}
+
+.panelTitle {
+  margin-bottom: 10vh;
+  border-top: 1px solid var(--body-bg);
 }
 
 .panelTitle ul {
@@ -905,7 +906,7 @@ c3m-tabs li.L9 {
     margin-bottom: 5vh;
   }
 
-  div.panelTitle h2 {
+  div.contentMain > h2 {
     font-size: 2em;
     padding: 0.5em 2rem;
   }
