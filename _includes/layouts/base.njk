@@ -6,6 +6,7 @@
     <title>CreamJS - {{ renderData.title or title or metadata.title }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/librairie.css' | url }}">
   </head>
 
 
@@ -73,6 +74,7 @@
 
   </div>
   <script type="text/javascript" src="{{ '/assets/js/main.js' | url }}"></script>
+  <script type="text/javascript" src="{{ '/assets/js/prettify.js' | url }}"></script>
   <script type="text/javascript" src="{{ '/assets/js/classlist-polyfill-IE.js' | url }}"></script>
 </body>
 
