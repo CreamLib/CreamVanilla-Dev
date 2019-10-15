@@ -3,8 +3,8 @@ title: Buttons & Controls
 description: This is the button component
 date: 2019-09-25
 tags:
-  - components
-  - forms
+- components
+- forms
 layout: layouts/component.njk
 ---
 
@@ -23,7 +23,7 @@ layout: layouts/component.njk
 <div class="titleComponent">
   <!-- NORMAL BUTTON -->
   <div class="descriptionComponent" id="button">
-  <h3>General Buttons</h3>
+    <h3>General Buttons</h3>
     <div class="explain">
       <p>General action buttons.</p>
       <blockquote>"If href has no value, then it is a button."</blockquote>
@@ -49,8 +49,8 @@ layout: layouts/component.njk
         </ul>
         <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
           <div class="code">
-          <!--?prettify lang=html linenums=true?-->
-          <pre class="prettyprint linenums">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
             <code>
             &lt!-- Normal button --&gt;
             &lt;p class="ui-buttons"&gt;
@@ -66,7 +66,7 @@ layout: layouts/component.njk
             &lt;/p&gt;
             </code>
           </pre>
-        </div>
+          </div>
         </div>
         <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
           <div _ngcontent-c18="" class="code">
@@ -84,28 +84,68 @@ layout: layouts/component.njk
     <h3>Icon Buttons</h3>
     <!-- Demo -->
     <div class="demo">
-      <ul class="buttons-bar">
-        <li><c3m-button-icon class="icon-delete">Delete</c3m-button-icon></li>
-        <li><c3m-button-icon class="icon-edit">Edit</c3m-button-icon></li>
-        <li><c3m-button-icon class="icon-add">Add</c3m-button-icon></li>
+      <ul class="buttons-bar ui-buttons">
+        <li><button class="icon-delete">Delete</button></li>
+        <li><button class="icon-edit">Edit</button></li>
+        <li><button class="icon-add">Add</button></li>
       </ul>
     </div>
     <!-- CODE SNIPPETS -->
-    <c3m-tabs class="snippets">
-      <!-- SNIPPETS HTML -->
-      <c3m-tab tabTitle="To call the component">
-        <div class="code">
-          <!--?prettify lang=html linenums=true?-->
-          <pre class="prettyprint linenums">
-                    <code>
-&lt;c3m-button-icon class=&#34;icon-delete&#34;&gt;Delete&lt;/c3m-button-icon&gt;
-&lt;c3m-button-icon class=&#34;icon-edit&#34;&gt;Edit&lt;/c3m-button-icon&gt;
-&lt;c3m-button-icon class=&#34;icon-add&#34;&gt;Add&lt;/c3m-button-icon&gt;
-</code>
-                </pre>
+    <div class="snippets">
+      <div class="tabsContainer">
+        <!-- SNIPPETS HTML -->
+        <ul class="buttons-bar">
+          <li class="over active">
+            <button id="tab02_01" aria-controls="tab02_01_content">HTML</button>
+          </li>
+          <li class="over">
+            <button id="tab02_02" aria-controls="tab02_02_content">CSS</button>
+          </li>
+        </ul>
+        <div class="content" aria-hidden="false" aria-labeledby="tab02_01" id="tab02_01_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+              <code>
+              &lt!-- Delete button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="icon-delete"&gt;Delete&lt;/button&gt;
+              &lt;/p&gt;
+              &lt!-- Edit button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="icon-edit"&gt;Edit&lt;/button&gt;
+              &lt;/p&gt;
+              &lt!-- Add button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="icon-add"&gt;Add&lt;/button&gt;
+              &lt;/p&gt;
+              </code>
+            </pre>
+          </div>
         </div>
-      </c3m-tab>
-    </c3m-tabs>
+        <div class="content" aria-hidden="true" aria-labeledby="tab02_02" id="tab02_02_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+              <code>
+              &lt!-- Normal button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button&gt;general action&lt;/button&gt;
+              &lt;/p&gt;
+              &lt!-- Second button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="second"&gt;second action&lt;/button&gt;
+              &lt;/p&gt;
+              &lt!-- Cancel button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="cancel"&gt;cancel action&lt;/button&gt;
+              &lt;/p&gt;
+              </code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- ICON ONLY BUTTONS -->
@@ -113,28 +153,54 @@ layout: layouts/component.njk
     <h3>Buttons With Icons Only</h3>
     <!-- Demo -->
     <div class="demo">
-      <ul class="buttons-bar">
-        <li><c3m-button-icon-only class="icon-delete">Delete</c3m-button-icon-only></li>
-        <li><c3m-button-icon-only class="icon-edit">Edit</c3m-button-icon-only></li>
-        <li><c3m-button-icon-only class="icon-add">Add</c3m-button-icon-only></li>
+      <ul class="buttons-bar ui-buttons">
+        <li><button class="icon-delete iconOnly">Delete</button></li>
+        <li><button class="icon-edit iconOnly">Edit</button></li>
+        <li><button class="icon-add iconOnly">Add</button></li>
       </ul>
     </div>
     <!-- CODE SNIPPETS -->
-    <c3m-tabs class="snippets">
-      <!-- SNIPPETS HTML -->
-      <c3m-tab tabTitle="To call the component">
-        <div class="code">
-          <!--?prettify lang=html linenums=true?-->
-          <pre class="prettyprint linenums">
-                    <code>
-&lt;c3m-button-icon-only class=&#34;icon-delete&#34;&gt;Delete&lt;/c3m-button-icon-only&gt;
-&lt;c3m-button-icon-only class=&#34;icon-edit&#34;&gt;Edit&lt;/c3m-button-icon-only&gt;
-&lt;c3m-button-icon-only class=&#34;icon-add&#34;&gt;Add&lt;/c3m-button-icon-only&gt;
-</code>
-                </pre>
+    <div class="snippets">
+      <div class="tabsContainer">
+        <!-- SNIPPETS HTML -->
+        <ul class="buttons-bar">
+          <li class="over active">
+            <button id="tab03_01" aria-controls="tab03_01_content">HTML</button>
+          </li>
+          <li class="over">
+            <button id="tab03_02" aria-controls="tab03_02_content">CSS</button>
+          </li>
+        </ul>
+        <div class="content" aria-hidden="false" aria-labeledby="tab03_01" id="tab03_01_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+              <code>
+              &lt!-- Delete button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="icon-delete iconOnly"&gt;Delete&lt;/button&gt;
+              &lt;/p&gt;
+              &lt!-- Edit button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="icon-edit iconOnly"&gt;Edit&lt;/button&gt;
+              &lt;/p&gt;
+              &lt!-- Add button --&gt;
+              &lt;p class="ui-buttons"&gt;
+                &lt;button class="icon-add iconOnly"&gt;Add&lt;/button&gt;
+              &lt;/p&gt;
+              </code>
+            </pre>
+          </div>
         </div>
-      </c3m-tab>
-    </c3m-tabs>
+        <div class="content" aria-hidden="true" aria-labeledby="tab03_02" id="tab03_02_content">
+          <div class="code">
+            <pre class="prettyprint lang-cs">
+              <code></code>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- UPLOAD BUTTON -->
@@ -153,8 +219,7 @@ layout: layouts/component.njk
           <pre class="prettyprint linenums">
   &lt;!-- Button Upload --&gt;
   &#x3C;c3m-button-file&#x3E;Choose a file&#x3C;/c3m-button-file&#x3E;
-                  </pre
-          >
+                  </pre>
         </div>
       </c3m-tab>
     </c3m-tabs>
@@ -185,4 +250,3 @@ layout: layouts/component.njk
     </c3m-tabs>
   </div>
 </div>
-

@@ -13,10 +13,42 @@
 }
 
 /* COLORS OF DIFFERENTS BUTTONS */
-.ui-buttons .second  {
+.ui-buttons .second {
   background-color: var(--hot-color);
 }
 
 .ui-buttons .cancel {
   background-color: var(--n-dark);
+}
+
+/* ICON BUTTON */
+
+.ui-buttons button[class*='icon-'] {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+  background-image: url(/assets/img/sprite.svg);
+  background-repeat: no-repeat;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+}
+
+.ui-buttons button.iconOnly {
+  overflow: hidden;
+  text-indent: -50em;
+  padding: .5rem 1rem;
+}
+
+.ui-buttons .icon-delete {
+  background-position: 0.5em 5px;
+}
+
+.ui-buttons .icon-edit {
+  background-position: 0.5em -78px;
+}
+
+.ui-buttons .icon-download {
+  background-position: 0.5em -176px;
+}
+
+.ui-buttons .icon-add {
+  background-position: 0.5em -242px;
 }
