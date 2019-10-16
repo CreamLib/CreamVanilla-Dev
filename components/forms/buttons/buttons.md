@@ -71,7 +71,9 @@ layout: layouts/component.njk
         <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
           <div _ngcontent-c18="" class="code">
             <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
-              Code CSS
+              .toto &#123;
+                color: #FFF;
+              &#125;
             </pre>
           </div>
         </div>
