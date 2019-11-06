@@ -1,0 +1,11 @@
+---
+layout: layouts/component.njk
+category: categories
+tags: svg5
+title: Utilities elements
+description: This is components for utilities elements
+---
+
+<div class="wrapper">
+  <h3>Utilities elements</h3>
+</div>

@@ -7,5 +7,335 @@ tags:
   - forms
 layout: layouts/component.njk
 ---
-<h2>checkboxes</h2>
-<p>This is the checkboxes component with vanilla JS</p>
+
+<!-- Component Page Title -->
+<div class="panelTitle">
+  <ul>
+    <li><a href="#checkbox">Checkboxes</a></li>
+    <li><a href="#checkbox-group">Checkbox Group</a></li>
+    <li><a href="#checkbox-link">Checkbox with link in label</a></li>
+    <li><a href="#checkbox-button">Checkbox-button</a></li>
+  </ul>
+</div>
+
+<!-- Component Title -->
+<div class="titleComponent">
+  <!-- SIMPLE CHECKBOX -->
+  <div class="descriptionComponent" id="checkbox">
+    <h3>Checkboxes</h3>
+    <!-- Demo -->
+    <div class="demo">
+      <p class="ui-checkboxes">
+        <input type="checkbox" id="checkbox1" name="checkboxName1">
+        <label for="checkbox1">Do you want check me?</label>
+      </p>
+    </div>
+    <div class="explain">
+      <dl>
+        <div>
+          <dt>type</dt>
+          <dd>The type of the Input</dd>
+        </div>
+        <div>
+          <dt>id</dt>
+          <dd>The most important attribute : Link between Label and Input</dd>
+        </div>
+        <div>
+          <dt>name</dt>
+          <dd>The name of input</dd>
+        </div>
+        <div>
+          <dt>for</dt>
+          <dd>Must be the same of the id</dd>
+        </div>
+      </dl>
+    </div>
+    <h4>Custom checkbox (add the <code>custom</code> class)</h4>
+    <!-- Demo -->
+    <div class="demo">
+      <p class="ui-checkboxes custom">
+        <input type="checkbox" id="checkbox2" name="checkboxName2">
+        <label for="checkbox2">Do you want check me?</label>
+      </p>
+    </div>
+    <h4>Unstressed checkbox (add the <code>unstressed</code> class)</h4>
+    <!-- Demo -->
+    <div class="demo">
+      <p class="ui-checkboxes unstressed">
+        <input type="checkbox" id="checkbox3" name="checkboxName3">
+        <label for="checkbox3">Do you want check me?</label>
+      </p>
+    </div>
+    <h4>On-off Button (add the <code>on-off</code> class)</h4>
+    <!-- Demo -->
+    <div class="demo">
+      <p class="ui-checkboxes on-off">
+        <input type="checkbox" id="checkbox4" name="checkboxName4">
+        <label for="checkbox4">Do you want check me?</label>
+      </p>
+    </div>
+    <!-- CODE SNIPPETS -->
+    <div class="snippets">
+      <div class="tabsContainer">
+        <ul class="buttons-bar">
+          <li class="over active">
+            <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+          </li>
+          <li class="over">
+            <button id="tab01_02" aria-controls="tab01_02_content">CSS</button>
+          </li>
+        </ul>
+        <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+            <code>
+            &lt!-- Normal checkbox --&gt;
+            &lt;p class="ui-checkboxes"&gt;
+              &lt;input type="checkbox" id="checkbox1" name="checkboxName1"&gt;
+              &lt;label for="checkbox1"&gt;
+            &lt;/p&gt;
+            <br />
+            &lt!-- Custom checkbox --&gt;
+            &lt;p class="ui-checkboxes custom"&gt;
+              &lt;input type="checkbox" id="checkbox2" name="checkboxName2"&gt;
+              &lt;label for="checkbox2"&gt;
+            &lt;/p&gt;
+            <br />
+            &lt!-- Unstressed checkbox --&gt;
+            &lt;p class="ui-checkboxes unstressed"&gt;
+              &lt;input type="checkbox" id="checkbox3" name="checkboxName3"&gt;
+              &lt;label for="checkbox3"&gt;
+            &lt;/p&gt;
+            <br />
+            &lt!-- On-off checkbox --&gt;
+            &lt;p class="ui-checkboxes on-off"&gt;
+              &lt;input type="checkbox" id="checkbox4" name="checkboxName4"&gt;
+              &lt;label for="checkbox4"&gt;
+            &lt;/p&gt;
+            </code>
+          </pre>
+          </div>
+        </div>
+        <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
+          <div _ngcontent-c18="" class="code">
+            <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+              .toto &#123;
+                color: #FFF;
+              &#125;
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CHECKBOX GROUP -->
+  <div class="descriptionComponent" id="checkbox-group">
+    <h3>Checkbox group</h3>
+    <!-- Demo -->
+    <div class="demo">
+      <fieldset class="ui-checkbox-groups">
+        <legend>Which conferences would you like to attend?</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="smash" name="conf">
+            <label for="smash">Smashing Conf</label>
+          </li>
+          <li>
+            <input type="checkbox" id="apart" name="conf">
+            <label for="apart">An Event Apart</label>
+          </li>
+          <li>
+            <input type="checkbox" id="perf" name="conf">
+            <label for="perf">Performance Now</label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+    <h4>Single Line (add the <code>go-along</code> class)</h4>
+    <!-- Demo -->
+    <div class="demo">
+      <fieldset class="ui-checkbox-groups go-along">
+        <legend>Which subject are you interested on?</legend>
+        <ul>
+          <li>
+            <input type="checkbox" id="confWeb" name="interest">
+            <label for="confWeb">Web</label>
+          </li>
+          <li>
+            <input type="checkbox" id="confMob" name="interest">
+            <label for="confMob">Mobile</label>
+          </li>
+          <li>
+            <input type="checkbox" id="confCloud" name="interest">
+            <label for="confCloud">Cloud</label>
+          </li>
+        </ul>
+      </fieldset>
+    </div>
+    <!-- CODE SNIPPETS -->
+    <div class="snippets">
+      <div class="tabsContainer">
+        <ul class="buttons-bar">
+          <li class="over active">
+            <button id="tab02_01" aria-controls="tab02_01_content">HTML</button>
+          </li>
+          <li class="over">
+            <button id="tab02_02" aria-controls="tab02_02_content">CSS</button>
+          </li>
+        </ul>
+        <div class="content" aria-hidden="false" aria-labeledby="tab02_01" id="tab02_01_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+            <code>
+            &lt!-- Checkbox group --&gt;
+            &lt;fieldset class="ui-checkbox-groups"&gt;
+              &lt;legend&gt;Which conferences would you like to attend?&lt;/legend&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;input type="checkbox" id="smash" name="conf"&gt;
+                  &lt;label for="smash"&gt;Smashing conf&lt;/label&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;input type="checkbox" id="apart" name="conf"&gt;
+                  &lt;label for="apart"&gt;An Event Apart&lt;/label&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;input type="checkbox" id="perf" name="conf"&gt;
+                  &lt;label for="perf"&gt;Performance Now&lt;/label&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/fieldset&gt;
+            <br />
+            &lt!-- Checkbox group (Single line) --&gt;
+            &lt;fieldset class="ui-checkbox-groups go-along"&gt;
+              &lt;legend&gt;Which subjects are you interested on?&lt;/legend&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;input type="checkbox" id="confWeb" name="interest"&gt;
+                  &lt;label for="confWeb"&gt;Smashing conf&lt;/label&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;input type="checkbox" id="confMob" name="interest"&gt;
+                  &lt;label for="confMob"&gt;An Event Apart&lt;/label&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  &lt;input type="checkbox" id="confCloud" name="interest"&gt;
+                  &lt;label for="confCloud"&gt;Performance Now&lt;/label&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/fieldset&gt;
+            </code>
+          </pre>
+          </div>
+        </div>
+        <div class="content" aria-hidden="true" aria-labeledby="tab02_02" id="tab02_02_content">
+          <div _ngcontent-c18="" class="code">
+            <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+              .toto &#123;
+                color: #FFF;
+              &#125;
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CHECKBOX LINK -->
+  <div class="descriptionComponent" id="checkbox-link">
+    <h3>Checkbox with link in label</h3>
+    <!-- Demo -->
+    <div class="demo">
+      <p class="ui-checkboxes checkbox-link">
+        <input type="checkbox" id="tofu" name="tofu">
+        <label for="tofu">I've read and I agree with the <a href="#">termes of use</a></label>
+      </p>
+    </div>
+    <!-- CODE SNIPPETS -->
+    <div class="snippets">
+      <div class="tabsContainer">
+        <ul class="buttons-bar">
+          <li class="over active">
+            <button id="tab03_01" aria-controls="tab03_01_content">HTML</button>
+          </li>
+          <li class="over">
+            <button id="tab03_02" aria-controls="tab03_02_content">CSS</button>
+          </li>
+        </ul>
+        <div class="content" aria-hidden="false" aria-labeledby="tab03_01" id="tab03_01_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+            <code>
+            &lt;p class="ui-checkboxes checkbox-link"&gt;
+              &lt;input type="checkbox" id="tofu" name="tofu"&gt;
+              &lt;label for="tofu"&gt;I've read and I agree with the &lt;a href="#"&gt;termes of use&lt;/a&gt;&lt;/label&gt;
+            &lt;/p&gt;
+            </code>
+          </pre>
+          </div>
+        </div>
+        <div class="content" aria-hidden="true" aria-labeledby="tab03_02" id="tab03_02_content">
+          <div _ngcontent-c18="" class="code">
+            <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+              .toto &#123;
+                color: #FFF;
+              &#125;
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CHECKBOX BUTTON -->
+  <div class="descriptionComponent" id="checkbox-button">
+    <h3>Checkbox button</h3>
+    <!-- Demo -->
+    <div class="demo">
+      <p class="ui-checkbox-button">
+        <label>
+          <input type="checkbox" name="checkboxName4">
+          <span>Check me!</span>
+        </label>
+      </p>
+    </div>
+    <!-- CODE SNIPPETS -->
+    <div class="snippets">
+      <div class="tabsContainer">
+        <ul class="buttons-bar">
+          <li class="over active">
+            <button id="tab04_01" aria-controls="tab04_01_content">HTML</button>
+          </li>
+          <li class="over">
+            <button id="tab04_02" aria-controls="tab04_02_content">CSS</button>
+          </li>
+        </ul>
+        <div class="content" aria-hidden="false" aria-labeledby="tab03_01" id="tab03_01_content">
+          <div class="code">
+            <!--?prettify lang=html linenums=true?-->
+            <pre class="prettyprint linenums">
+            <code>
+            &lt;p class="ui-checkbox-button"&gt;
+              &lt;label&gt;
+                &lt;input type="checkbox" name="checkboxName4"&gt;
+                &lt;span&gt;Check me!&lt;/span&gt;
+              &lt;/label&gt;
+            &lt;/p&gt;
+            </code>
+          </pre>
+          </div>
+        </div>
+        <div class="content" aria-hidden="true" aria-labeledby="tab04_02" id="tab04_02_content">
+          <div _ngcontent-c18="" class="code">
+            <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+              .toto &#123;
+                color: #FFF;
+              &#125;
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
