@@ -4,11 +4,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
 
   eleventyConfig.addCollection('categories', collection => {
-    return collection.getFilteredByGlob('components/*/*.md');
+    return collection.getFilteredByGlob('components/*/*.html');
   });
 
   eleventyConfig.addCollection('components', collection => {
-    return collection.getFilteredByGlob('components/*/*/*.md');
+    return collection.getFilteredByGlob('components/*/*/*.html');
   });
 
   eleventyConfig.setBrowserSyncConfig({

@@ -1,0 +1,73 @@
+---
+title: Fieldset
+description: This is the fieldset component
+date: 2019-11-07
+tags:
+- components
+- forms
+layout: layouts/component.njk
+---
+
+<!-- Component Page Title -->
+<div class="panelTitle">
+    <ul>
+        <li><a href="#fieldset">Normal Fieldset</a></li>
+    </ul>
+</div>
+
+<!-- Component Title -->
+<div class="titleComponent">
+    <!-- NORMAL FIELDSET -->
+    <div class="descriptionComponent" id="fieldset">
+        <h3>Fieldset</h3>
+
+        <div class="explain">
+            <p>Fieldset must be a child of a <code>form</code> element. Use it to group fields of the same nature</p>
+
+            <div class="tip">
+                <svg width="40" height="40">
+                    <use href="assets/img/icons.svg#tip" /></svg>
+                <div class="content">
+                    <p>The <code>legend</code> element is mandatory for fieldsets.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo">
+            <fieldset class="ui-fieldset">
+                <legend>Fieldset</legend>
+                <p>This is the content of my fieldset</p>
+            </fieldset>
+        </div>
+
+        <div class="explain">
+            <dl>
+                <dt>legend</dt>
+                <dd>legend of the fieldset</dd>
+            </dl>
+        </div>
+
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+                        <code>
+                            &lt;fieldset class="ui-fieldset"&gt;
+                                &lt;legend&gt;Fieldset&lt;/legend&gt;
+                                &lt;p&gt;This is the content of my fieldset&lt;/p&gt;
+                            &lt;fieldset&gt;
+                        </code>
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

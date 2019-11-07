@@ -272,3 +272,20 @@
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
+
+/******************************/
+/********** FIELDSET **********/
+/******************************/
+fieldset.ui-fieldset {
+  padding: 1rem;
+  border: 2px solid var(--main-light);
+}
+
+/* Legend */
+fieldset.ui-fieldset > legend {
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  color: var(--main-color);
+  padding: 0 0.5rem;
+  margin-left: 0.5rem;
+}
