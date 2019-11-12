@@ -1,5 +1,5 @@
 ---
-title: Input
+title: Input Component
 description: This is the input component
 date: 2019-11-07
 tags:
@@ -26,35 +26,234 @@ layout: layouts/component.njk
     <!-- INPUT REGULAR -->
     <div class="descriptionComponent" id="input">
         <h3>Regular Text Input</h3>
+        <div class="demo">
+            <p class="ui-input">
+                <label for="name1">Enter your name</label>
+                <input type="text" id="name1" name="name1" placeholder="a placeholder">
+            </p>
+        </div>
+
+        <div class="explain">
+            <dl>
+                <div>
+                    <dt>type</dt>
+                    <dd>The type of the Input</dd>
+                </div>
+                <div>
+                    <dt>id</dt>
+                    <dd>Input's general idetnifier</dd>
+                </div>
+                <div>
+                    <dt>value</dt>
+                    <dd>Input's current value (optional)</dd>
+                </div>
+                <div>
+                    <dt>for</dt>
+                    <dd>Label attribute. Must be the same of the id</dd>
+                </div>
+                <div>
+                    <dt>autocomplete</dt>
+                    <dd>Defaults to "on" (optional)</dd>
+                </div>
+                <div>
+                    <dt>maxlength</dt>
+                    <dd>The maximum allowed value length (optional)</dd>
+                </div>
+                <div>
+                    <dt>disabled</dt>
+                    <dd>When present, the element is disabled/read-only (optional)</dd>
+                </div>
+                <div>
+                    <dt>placeholder</dt>
+                    <dd>Placeholder value (optional)</dd>
+                </div>
+            </dl>
+
+            <div class="tip">
+                <svg width="40" height="40">
+                    <use href="../assets/img/icons.svg#tip" /></svg>
+                <div class="content">
+                    <p>The <code>id</code> attribute of an input is very important for form accessibility. It allows
+                        the user-agent to associate a label to its input.</p>
+                    <p><code>Placeholders</code> don't replace labels; they should give hints on how to fill the input.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mandatory Input -->
+        <h4>Mandatory field (need <code>libraire.js</code>)</h4>
+        <div class="demo">
+            <p class="ui-input">
+                <label for="name2">Enter your name</label>
+                <input type="text" id="name2" name="name2" placeholder="a placeholder" required>
+            </p>
+        </div>
+
+        <!-- Disabled input -->
+        <h4>Disabled field (need <code>libraire.js</code>)</h4>
+        <div class="demo">
+            <p class="ui-input">
+                <label for="name3">Enter your name</label>
+                <input type="text" id="name3" name="name3" placeholder="a placeholder" disabled>
+            </p>
+        </div>
+
+        <!-- CODE SNIPPETS -->
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+                    </li>
+                    <li class="over">
+                        <button id="tab01_02" aria-controls="tab01_02_content">CSS</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+              <code>
+              &lt!-- Regular Input --&gt;
+              &lt;p class="ui-input"&gt;
+                &lt;label for="name1"&gt;Enter your name&lt;/label&gt;
+                &lt;input type="text" id="name1" name="name1" placeholder="a placeholder"&gt;
+              &lt;/p&gt;
+
+              &lt!-- Mandatory Input --&gt;
+              &lt;p class="ui-input"&gt;
+                &lt;label for="name2"&gt;Enter your name&lt;/label&gt;
+                &lt;input type="text" id="name2" name="name2" placeholder="a placeholder" required&gt;
+              &lt;/p&gt;
+
+              &lt!-- Disabled Input --&gt;
+              &lt;p class="ui-input"&gt;
+                &lt;label for="name3"&gt;Enter your name&lt;/label&gt;
+                &lt;type="text" id="name3" name="name3" placeholder="a placeholder" disabled&gt;
+              &lt;/p&gt;
+              </code>
+            </pre>
+                    </div>
+                </div>
+                <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
+                    <div _ngcontent-c18="" class="code">
+                        <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                .toto &#123;
+                  color: #FFF;
+                &#125;
+              </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- INPUT SEARCH -->
     <div class="descriptionComponent" id="input-search">
         <h3>Search Input</h3>
+        <div class="demo">
+            <p class="ui-input search" role="search">
+                <label for="main-search">Search the site</label>
+                <input type="search" id="main-search" name="main-search" autocomplete="on">
+                <button type="submit">
+                    <svg width="35" height="35" viewBox="0 0 35 35" aria-labelledby="searchTitId">
+                        <title id="searchTitId">Perform search</title>
+                        <circle cx="17.5" cy="17.5" r="17.5" />
+                        <g>
+                            <path
+                                d="M19.12,19a7,7,0,1,1-.61-10A7.05,7.05,0,0,1,19.12,19ZM9.65,10.59a5.59,5.59,0,1,0,7.89-.49A5.6,5.6,0,0,0,9.65,10.59Z"
+                                style="fill: #fff" />
+                            <rect x="18.15" y="18.98" width="3.64" height="1.46" rx="0.73" ry="0.73"
+                                transform="translate(-8.02 21.63) rotate(-48.54)" style="fill: #fff" />
+                            <rect x="23.01" y="18.96" width="2.19" height="8.78" rx="1" ry="1"
+                                transform="translate(-9.36 25.96) rotate(-48.54)" style="fill: #fff" />
+                        </g>
+                    </svg>
+                </button>
+            </p>
+        </div>
+        <div class="explain">
+            <p>The input type <code>search</code> will inherit all attributes from the generic <code>input</code> element.</p>
+        </div>
     </div>
 
-    <!-- INPUT PHONE -->
-    <div class="descriptionComponent" id="input-tel">
-        <h3>Phone Input</h3>
+    <!-- CODE SNIPPETS -->
+    <div class="snippets">
+        <div class="tabsContainer">
+            <ul class="buttons-bar">
+                <li class="over active">
+                    <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+                </li>
+                <li class="over">
+                    <button id="tab01_02" aria-controls="tab01_02_content">CSS</button>
+                </li>
+            </ul>
+            <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+                <div class="code">
+                    <!--?prettify lang=html linenums=true?-->
+                    <pre class="prettyprint linenums">
+                      <code>
+                      &lt!-- SEARCH INPUT --&gt;
+                      &lt;p class="ui-input search" role="search"&gt;
+                        &lt;label for="main-search"&gt;Search the site&lt;/label&gt;
+                        &lt;input type="search" id="main-search" name="main-search" autocomplete="on"&gt;
+                        &lt;button&gt;
+                      &lt;/p&gt;
+                      </code>
+                    </pre>
+                </div>
+            </div>
+            <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
+                <div _ngcontent-c18="" class="code">
+                    <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                        .toto &#123;
+                          color: #FFF;
+                        &#125;
+                      </pre>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
-    <!-- INPUT MAIL -->
-    <div class="descriptionComponent" id="input-mail">
-        <h3>E-mail Input</h3>
-    </div>
+<!-- INPUT PHONE -->
+<div class="descriptionComponent" id="input-tel">
+    <h3>Phone Input</h3>
+    <div class="demo">
 
-    <!-- URL INPUT -->
-    <div class="descriptionComponent" id="input-url">
-        <h3>URL Input</h3>
     </div>
+</div>
 
-    <!-- PASSWORD INPUT -->
-    <div class="descriptionComponent" id="input-password">
-        <h3>Password Input</h3>
-    </div>
+<!-- INPUT MAIL -->
+<div class="descriptionComponent" id="input-mail">
+    <h3>E-mail Input</h3>
+    <div class="demo">
 
-    <!-- ERROR MESSAGE -->
-    <div class="descriptionComponent" id="input-error-msg">
-        <h3>Contextual Error Message</h3>
     </div>
+</div>
+
+<!-- URL INPUT -->
+<div class="descriptionComponent" id="input-url">
+    <h3>URL Input</h3>
+    <div class="demo">
+
+    </div>
+</div>
+
+<!-- PASSWORD INPUT -->
+<div class="descriptionComponent" id="input-password">
+    <h3>Password Input</h3>
+    <div class="demo">
+
+    </div>
+</div>
+
+<!-- ERROR MESSAGE -->
+<div class="descriptionComponent" id="input-error-msg">
+    <h3>Contextual Error Message</h3>
+    <div class="demo">
+
+    </div>
+</div>
 </div>

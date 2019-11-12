@@ -289,3 +289,26 @@ fieldset.ui-fieldset > legend {
   padding: 0 0.5rem;
   margin-left: 0.5rem;
 }
+
+/***************************/
+/********** INPUT **********/
+/***************************/
+.ui-input.required label {
+  background-image: url(/assets/img/mandatory.svg);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
+/* ---- INPUT SEARCH ----- */
+.ui-input.search button {
+  vertical-align: bottom;
+}
+
+.ui-input.search circle {
+  fill: var(--main-color);
+}
+
+.ui-input.search button:hover circle,
+.ui-input.search button:focus circle {
+  fill: var(--sec-color);
+}
