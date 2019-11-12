@@ -293,10 +293,19 @@ fieldset.ui-fieldset > legend {
 /***************************/
 /********** INPUT **********/
 /***************************/
+.ui-input:invalid {
+  border: 2px solid #FC3333;
+}
+
 .ui-input.required label {
   background-image: url(/assets/img/mandatory.svg);
   background-repeat: no-repeat;
   padding-left: 20px;
+}
+
+.ui-input.url input, .ui-input.mail input, .ui-input.tel input {
+  width: 85%;
+  max-width: 22em;
 }
 
 /* ---- INPUT SEARCH ----- */
@@ -311,4 +320,15 @@ fieldset.ui-fieldset > legend {
 .ui-input.search button:hover circle,
 .ui-input.search button:focus circle {
   fill: var(--sec-color);
+}
+
+/* --- INPUT ERROR MSG ---*/
+.error-msg p {
+  font-family: var(--stack-b);
+  color: var(--alert-color);
+  margin-bottom: 0.8rem;
+}
+.error-msg svg {
+  fill: var(--alert-color);
+  vertical-align: -0.2em;
 }
