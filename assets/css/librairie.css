@@ -323,7 +323,7 @@ fieldset.ui-fieldset > legend {
 }
 
 /* --- INPUT ERROR MSG ---*/
-.error-msg p {
+.error-msg {
   font-family: var(--stack-b);
   color: var(--alert-color);
   margin-bottom: 0.8rem;
@@ -331,4 +331,82 @@ fieldset.ui-fieldset > legend {
 .error-msg svg {
   fill: var(--alert-color);
   vertical-align: -0.2em;
+}
+
+/***************************/
+/********** RADIO **********/
+/***************************/
+.ui-radio-group {
+  margin-bottom: 1rem;
+}
+
+.ui-radio-group legend {
+  font: 1em/1 var(--stack-b);
+  padding-bottom: 1em;
+}
+
+.ui-radio-group label {
+  display: inline-block;
+  font-family: var(--stack);
+  padding: 0 0 0 0.5em;
+}
+
+/* Single line options */
+.ui-radio-group.go-along ul {
+  display: flex;
+}
+.ui-radio-group.go-along .ui-radio + .ui-radio {
+  margin-left: 2em;
+}
+
+/* Radio buttons */
+
+.ui-radio-group.switch {
+  display: flex;
+  position: relative;
+}
+
+.ui-radio-group.switch li {
+  display: inline-block;
+}
+
+.ui-radio-group.switch input {
+  position: absolute;
+  width: 25px;
+  left: -35px;
+  opacity: 0;
+}
+
+.ui-radio-group.switch .ui-radio label {
+  display: inline-block;
+  overflow: hidden;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  color: var(--n-dark);
+  background: var(--n-medium);
+  padding: 0.65em 0.8em 0.5em;
+  margin-left: -4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.ui-radio-group.switch .ui-radio:first-child label {
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  margin-left: 0;
+}
+.ui-radio-group.switch .ui-radio:last-child label {
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.ui-radio-group.switch input:checked + label {
+  color: var(--text-inv);
+  background-color: var(--main-color);
+}
+
+@media screen and (min-width: 750px) {
+  .ui-radio-group legend {
+    font-size: 1.3em;
+  }
 }
