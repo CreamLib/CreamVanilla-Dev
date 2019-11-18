@@ -1,0 +1,67 @@
+---
+title: Slider & Progress
+description: This is the Slider & Progress components
+date: 2019-11-18
+tags:
+- components
+- forms
+layout: layouts/component.njk
+---
+
+<!-- Component Page Title -->
+<div class="panelTitle">
+    <ul>
+        <li><a href="#slider">Slider</a></li>
+        <li><a href="#progress-bar">Progress Bar</a></li>
+        <li><a href="#progress-spinner">Progress Spinner</a></li>
+    </ul>
+</div>
+
+<!-- Component Title -->
+<div class="titleComponent">
+    <div class="descriptionComponent" id="slider">
+        <h3>Slider</h3>
+        <div class="demo">
+            <!-- SLIDER -->
+            <p class="ui-slider">
+                <label for="slider1">Choose a value</label>
+                <!-- Input type RANGE -->
+                <input type="range" id="slider1" min="0" max="50" step="1" value="25" />
+                <!-- Output for display change value -->
+                <span for="slider1" id="output">0</span>
+            </p>
+        </div>
+    </div>
+
+    <div class="descriptionComponent" id="progress-bar">
+        <h3>Progress Bar</h3>
+        <div class="demo">
+            <!-- PROGRESS BAR -->
+            <p class="ui-progress-bar">
+                <label for="choice">Choose an answer</label>
+                <select id="choice" name="choice">
+                    <option value="An answer">An answer</option>
+                    <option value="Another answer">Another answer</option>
+                    <option value="A 3rd answer">A 3rd answer</option>
+                    <option value="The right answer">The right answer</option>
+                </select>
+            </p>
+        </div>
+    </div>
+
+    <div class="descriptionComponent" id="progress-spinner">
+        <h3>Progress Spinner</h3>
+        <div class="demo">
+            <!-- PROGRESS SPINNER -->
+            <p class="ui-progress-spinner">
+                <label for="choice">Choose an answer</label>
+                <select id="choice" name="choice">
+                    <option value="An answer">An answer</option>
+                    <option value="Another answer">Another answer</option>
+                    <option value="A 3rd answer">A 3rd answer</option>
+                    <option value="The right answer">The right answer</option>
+                </select>
+            </p>
+        </div>
+    </div>
+</div>

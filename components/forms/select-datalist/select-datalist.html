@@ -1,0 +1,268 @@
+---
+title: Select & Datalist
+description: This is the Select & Datalist components
+date: 2019-11-15
+tags:
+- components
+- forms
+layout: layouts/component.njk
+---
+
+<!-- Component Page Title -->
+<div class="panelTitle">
+    <ul>
+        <li><a href="#select">Regular Select</a></li>
+        <li><a href="#select-datalist">Datalist</a></li>
+        <li><a href="#select-datalists">Combined Datalists</a></li>
+    </ul>
+</div>
+
+<!-- Component Title -->
+<div class="titleComponent">
+    <div class="descriptionComponent" id="select">
+        <h3>Regular Select</h3>
+        <div class="demo">
+            <!-- REGULAR SELECT -->
+            <p class="ui-select">
+                <label for="choice">Choose an answer</label>
+                <select id="choice" name="choice">
+                    <option value="An answer">An answer</option>
+                    <option value="Another answer">Another answer</option>
+                    <option value="A 3rd answer">A 3rd answer</option>
+                    <option value="The right answer">The right answer</option>
+                </select>
+            </p>
+        </div>
+
+        <div class="explain">
+            <dl>
+                <div>
+                    <dt>title</dt>
+                    <dd>The Label of the Input</dd>
+                </div>
+                <div>
+                    <dt>name</dt>
+                    <dd>The value of the <code>name</code> attribute</dd>
+                </div>
+                <div>
+                    <dt>id</dt>
+                    <dd>The id of the Input</dd>
+                </div>
+                <div>
+                    <dt>for</dt>
+                    <dd>Need to be the same of the id</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- CODE SNIPPETS -->
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+                    </li>
+                    <li class="over">
+                        <button id="tab01_02" aria-controls="tab01_02_content">CSS</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+                            <code>
+                                &lt;!-- REGULAR SELECT --&gt;
+                                &lt;p class="ui-select"&gt;
+                                    &lt;label for="choice"&gt;Choose an answer&lt;/label&gt;
+                                    &lt;select id="choice" name="choice"&gt;
+                                        &lt;option value="An answer"&gt;An answer&lt;/option&gt;
+                                        &lt;option value="Another answer"&gt;Another answer&lt;/option&gt;
+                                        &lt;option value="A 3rd answer"&gt;A 3rd answer&lt;/option&gt;
+                                        &lt;option value="The right answer"&gt;The right answer&lt;/option&gt;
+                                    &lt;/select&gt;
+                                &lt;/p&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
+                    <div _ngcontent-c18="" class="code">
+                        <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                            .toto &#123;
+                                color: #FFF;
+                            &#125;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="descriptionComponent" id="select-datalist">
+        <h3>Datalist</h3>
+
+        <div class="demo">
+            <!-- REGULAR DATALIST -->
+            <p class="ui-select-datalist">
+                <label for="choose-me">Choose an answer</label>
+                <input type="text" id="choose-me" name="choose-me" list="mylist1" />
+                <datalist id="mylist1">
+                    <option value="An Answer"> An Answer </option>
+                    <option value="Another answer"> Another answer </option>
+                    <option value="A 3rd answer"> A 3rd answer </option>
+                    <option value="The right answer"> The right answer </option>
+                </datalist>
+            </p>
+        </div>
+
+        <div class="explain">
+            <dl>
+                <div>
+                    <dt>for</dt>
+                    <dd>Reference to the id of the Input</dd>
+                </div>
+                <div>
+                    <dt>name</dt>
+                    <dd>The value of the <code>name</code> attribute</dd>
+                </div>
+                <div>
+                    <dt>id</dt>
+                    <dd>The id of the Input</dd>
+                </div>
+                <div>
+                    <dt>list</dt>
+                    <dd>Link between input and datalist</dd>
+                </div>
+                <div>
+                    <dt>value</dt>
+                    <dd>Value of the option's datalist</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- CODE SNIPPETS -->
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab02_01" aria-controls="tab02_01_content">HTML</button>
+                    </li>
+                    <li class="over">
+                        <button id="tab02_02" aria-controls="tab02_02_content">CSS</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab02_01" id="tab02_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+                            <code>
+                                &lt;!-- REGULAR DATALIST --&gt;
+                                &lt;p class="ui-select-datalist"&gt;
+                                    &lt;label for="choose-me"&gt;Choose an answer&lt;/label&gt;
+                                    &lt;input type="text" id="choose-me" name="choose-me" list="mylist1" /&gt;
+                                    &lt;datalist id="mylist1"&gt;
+                                        &lt;option value="An Answer"&gt; An Answer &lt;/option&gt;
+                                        &lt;option value="Another answer"&gt; Another answer &lt;/option&gt;
+                                        &lt;option value="A 3rd answer"&gt; A 3rd answer &lt;/option&gt;
+                                        &lt;option value="The right answer"&gt; The right answer &lt;/option&gt;
+                                    &lt;/datalist&gt;
+                                &lt;/p&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" aria-hidden="true" aria-labeledby="tab02_02" id="tab02_02_content">
+                    <div _ngcontent-c18="" class="code">
+                        <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                            .toto &#123;
+                                color: #FFF;
+                            &#125;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="descriptionComponent" id="select-datalists">
+        <h3>Combined Datalists</h3>
+
+        <div class="demo">
+            <!-- COMBINED DATALIST -->
+            <div class="ui-select-datalists">
+                <p class="ui-select-datalist">
+                    <label for="choose-me1">Choose me please</label>
+                    <input type="text" id="choose-me1" name="choose-me1" list="mylist2" />
+                </p>
+                <p class="ui-select-datalist">
+                    <label for="choose-me2">Choose me too</label>
+                    <input type="text" id="choose-me2" name="choose-me2" list="mylist2" />
+                    <datalist id="mylist2">
+                        <option value="An Answer"> An Answer </option>
+                        <option value="Another answer"> Another answer </option>
+                        <option value="A 3rd answer"> A 3rd answer </option>
+                        <option value="The right answer"> The right answer </option>
+                    </datalist>
+                </p>
+            </div>
+        </div>
+
+        <div class="explain">
+            <dl>
+                <div>
+                    <dt>list</dt>
+                    <dd>Refer to the same datalist</dd>
+                </div>
+            </dl>
+        </div>
+
+        <!-- CODE SNIPPETS -->
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab03_01" aria-controls="tab03_01_content">HTML</button>
+                    </li>
+                    <li class="over">
+                        <button id="tab03_02" aria-controls="tab03_02_content">CSS</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab03_01" id="tab03_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+                            <code>
+                                &lt;!-- COMBINED DATALIST --&gt;
+                                &lt;div class="ui-select-datalists"&gt;
+                                    &lt;p class="ui-select-datalist"&gt;
+                                        &lt;label for="choose-me1"&gt;Choose me please&lt;/label&gt;
+                                        &lt;input type="text" id="choose-me1" name="choose-me1" list="mylist2" /&gt;
+                                    &lt;/p&gt;
+                                    &lt;p class="ui-select-datalist"&gt;
+                                        &lt;label for="choose-me2"&gt;Choose me too&lt;/label&gt;
+                                        &lt;input type="text" id="choose-me2" name="choose-me2" list="mylist2" /&gt;
+                                        &lt;datalist id="mylist2"&gt;
+                                            &lt;option value="An Answer"&gt; An Answer &lt;/option&gt;
+                                            &lt;option value="Another answer"&gt; Another answer &lt;/option&gt;
+                                            &lt;option value="A 3rd answer"&gt; A 3rd answer &lt;/option&gt;
+                                            &lt;option value="The right answer"&gt; The right answer &lt;/option&gt;
+                                        &lt;/datalist&gt;
+                                    &lt;/p&gt;
+                                &lt;/div&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" aria-hidden="true" aria-labeledby="tab03_02" id="tab03_02_content">
+                    <div _ngcontent-c18="" class="code">
+                        <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                            .toto &#123;
+                                color: #FFF;
+                            &#125;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
