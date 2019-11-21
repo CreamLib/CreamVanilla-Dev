@@ -543,7 +543,7 @@ fieldset.ui-fieldset > legend {
 }
 
 /* Output */
-.ui-slider #output {
+.ui-slider .output {
   position: relative;
   top: 0.3em;
   font: 1.2rem var(--stack-b);
@@ -551,7 +551,7 @@ fieldset.ui-fieldset > legend {
   color: var(--main-color);
   margin-left: 1rem;
 }
-.ui-slider.bubble #output {
+.ui-slider.bubble .output {
   position: absolute;
   display: inline-block;
   top: auto;
@@ -567,7 +567,7 @@ fieldset.ui-fieldset > legend {
   border-radius: 10px;
   transform: translate(-50%);
 }
-.ui-slider.bubble #output:after {
+.ui-slider.bubble .output:after {
   content: '';
   position: absolute;
   width: 0;
@@ -579,4 +579,18 @@ fieldset.ui-fieldset > legend {
   left: 50%;
   margin-left: -5px;
   margin-top: -1px;
+}
+
+/***********************/
+/***** BREADCRUMBS *****/
+/***********************/
+.ui-breadcrumbs li {
+  display: inline-block;
+  margin-right: 0.1rem;
+}
+
+.ui-breadcrumbs li:not(:last-of-type)::after {
+  display: inline-block;
+  content: '>';
+  padding: 0 0.5em;
 }
