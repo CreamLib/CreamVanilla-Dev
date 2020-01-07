@@ -1,4 +1,4 @@
-# Standard_Code
+# About creamVanilla Development Repo
 
 **HTML patterns crafted to help you create the basis for your standard, accessible and responsive web sites**
 
