@@ -2,13 +2,12 @@
 
 **HTML patterns crafted to help you create the basis for your standard, accessible and responsive web sites**
 
-This repo contains the Eleventy project. If you want to see the generated website, please go to <a href="https://creamlib.github.io/creamVanilla/" target="_blank">creamVanilla</a>.
+This repo contains the Eleventy development environment. If you want to see the generated website, please go to <a href="https://creamlib.github.io/creamVanilla/" target="_blank">creamVanilla</a>.
 
 Installation
 ===============================
 
-Run
-`npm install` 
+`npm install --save-dev @11ty/eleventy`
 
 
 Launch localhost
