@@ -2,9 +2,7 @@
 
 **HTML patterns crafted to help you create the basis for your standard, accessible and responsive web sites**
 
-
-This librarie uses the Eleventy static site generator.
-The "Standard_Code" repo contains the Eleventy project, if you want to see the generated website, please go to <a href="http://creamlib.github.io/creamJS/" target="_blank">creamJS</a>.
+This repo contains the Eleventy project. If you want to see the generated website, please go to <a href="https://creamlib.github.io/creamVanilla/" target="_blank">creamVanilla</a>.
 
 Installation
 ===============================
