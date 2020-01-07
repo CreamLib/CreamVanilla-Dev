@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreamJS - Accordion component</title>
+    <meta name="Description" content="This is the accordion component">
+    <link rel="stylesheet" href="/creamJS/assets/css/styles.css">
+    <link rel="stylesheet" href="/creamJS/assets/css/librairie.css">
+  </head>
+
+
+<body>
+  <div id="wrapper">
+<header>
+      <!-- Burger Button -->
+      <button [ngClass]="{ burgerVertical: menuMobile, burgerHorizontal: !menuMobile }">
+        <img src="/creamJS/assets/img/burger.svg" alt="Mobile Button (Open Menu)" />
+      </button>
+
+      <!-- Logo -->
+      <h1>
+        <a href="/creamJS/" class="logo">
+          <picture>
+            <source srcset="/creamJS/assets/img/creamJS-logo.svg" media="(min-width:1000px)" />
+            <img src="/creamJS/assets/img/creamNG-logo-sml.svg" alt="Cream-NG, your accessible Angular Lib" />
+          </picture>
+        </a>
+      </h1>
+
+      <!-- MENU -->
+      <nav class="primary-nav">
+        <ul class="accordion"><li class="menu-group closed">
+
+            <button class="panel-heading" aria-expanded="false" aria-controls="sousMenuforms"
+              id="itemMenuforms">
+              <svg>
+                <use xlink:href="/creamJS/assets/img/icons.svg#forms"></use>
+              </svg>
+              Form elements
+            </button>
+
+            <div class="panel-collapse" aria-hidden="true" id="sousMenuforms"
+              aria-labeledby="itemMenuforms">
+              <ul class="contenuMenu">
+                <li>
+                  <a href="/creamJS/components/forms/buttons/">Buttons &amp; Controls</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/datepicker/">datepicker component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/checkboxes/">checkboxes component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/fieldset/">Fieldset Component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/input/">Input Component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/radio/">Radio Component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/select-datalist/">Select &amp; Datalist</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/forms/slider-progress/">Slider &amp; Progress</a>
+                </li></ul>
+            </div>
+
+          </li><li class="menu-group closed">
+
+            <button class="panel-heading" aria-expanded="false" aria-controls="sousMenunavigation"
+              id="itemMenunavigation">
+              <svg>
+                <use xlink:href="/creamJS/assets/img/icons.svg#navigation"></use>
+              </svg>
+              Navigation elements
+            </button>
+
+            <div class="panel-collapse" aria-hidden="true" id="sousMenunavigation"
+              aria-labeledby="itemMenunavigation">
+              <ul class="contenuMenu">
+                <li>
+                  <a href="/creamJS/components/navigation/breadcrumbs/">Breadcrumbs component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/navigation/skip/">Skip component</a>
+                </li></ul>
+            </div>
+
+          </li><li class="menu-group closed">
+
+            <button class="panel-heading" aria-expanded="false" aria-controls="sousMenublocks"
+              id="itemMenublocks">
+              <svg>
+                <use xlink:href="/creamJS/assets/img/icons.svg#blocks"></use>
+              </svg>
+              Blocks elements
+            </button>
+
+            <div class="panel-collapse" aria-hidden="true" id="sousMenublocks"
+              aria-labeledby="itemMenublocks">
+              <ul class="contenuMenu">
+                <li>
+                  <a href="/creamJS/components/blocks/accordion/">Accordion component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/blocks/carousel/">Carousel component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/blocks/list/">List component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/blocks/tabs/">Tabs component</a>
+                </li></ul>
+            </div>
+
+          </li><li class="menu-group closed">
+
+            <button class="panel-heading" aria-expanded="false" aria-controls="sousMenusvg5"
+              id="itemMenusvg5">
+              <svg>
+                <use xlink:href="/creamJS/assets/img/icons.svg#svg5"></use>
+              </svg>
+              Utilities elements
+            </button>
+
+            <div class="panel-collapse" aria-hidden="true" id="sousMenusvg5"
+              aria-labeledby="itemMenusvg5">
+              <ul class="contenuMenu">
+                <li>
+                  <a href="/creamJS/components/utilities/dropdown/">Dropdown component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/utilities/modal/">Modal component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/utilities/pagination/">Pagination component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/utilities/steps/">Steps component</a>
+                </li>
+                <li>
+                  <a href="/creamJS/components/utilities/toast/">Toast component</a>
+                </li></ul>
+            </div>
+
+          </li><li class="menu-group closed">
+
+            <button class="panel-heading" aria-expanded="false" aria-controls="sousMenusvg5"
+              id="itemMenusvg5">
+              <svg>
+                <use xlink:href="/creamJS/assets/img/icons.svg#svg5"></use>
+              </svg>
+              Page structure
+            </button>
+
+            <div class="panel-collapse" aria-hidden="true" id="sousMenusvg5"
+              aria-labeledby="itemMenusvg5">
+              <ul class="contenuMenu"></ul>
+            </div>
+
+          </li></ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="contentMain">
+        <h2>Accordion component</h2>
+
+
+<!-- Component Page Title -->
+<div class="panelTitle">
+    <ul>
+        <li><a href="#accordion">Normal Accordion</a></li>
+    </ul>
+</div>
+
+<!-- Component Title -->
+<div class="titleComponent">
+    <div class="descriptionComponent" id="accordion">
+        <h3>Skip Link (invisible)</h3>
+        <div class="demo">
+            <ul class="ui-accordion">
+                <li class="ui-accordion-group">
+                    <button class="panel-heading" aria-expanded="false" attr.aria-controls="panel1" id="tab1">
+                        Title1
+                        <svg>
+                            <use xlink:href="/creamJS/assets/img/icons.svg#arrowDownSvg"></use>
+                        </svg>
+                    </button>
+
+                    <div class="panel-collapse" aria-hidden="true" id="panel1" aria-labeledby="tab1">
+                        <p>Illud tamen clausos vehementer angebat quod captis navigiis, quae frumenta vehebant per
+                            flumen, Isauri quidem alimentorum copiis adfluebant, ipsi vero solitarum rerum cibos iam
+                            consumendo inediae propinquantis aerumnas exitialis horrebant.</p>
+                    </div>
+                </li>
+
+                <li class="ui-accordion-group">
+                    <button class="panel-heading" aria-expanded="false" attr.aria-controls="panel2" id="tab2">
+                        Title2
+                        <svg>
+                            <use xlink:href="/creamJS/assets/img/icons.svg#arrowDownSvg"></use>
+                        </svg>
+                    </button>
+                    <div class="panel-collapse" aria-hidden="true" id="panel2" aria-labeledby="tab2">
+                        <p>Dum haec in oriente aguntur, Arelate hiemem agens Constantius post theatralis ludos atque
+                            circenses ambitioso editos apparatu diem sextum idus Octobres, qui imperii eius annum
+                            tricensimum terminabat, insolentiae pondera gravius librans, siquid dubium deferebatur aut
+                            falsum, pro liquido accipiens et conperto, inter alia excarnificatum Gerontium Magnentianae
+                            comitem partis exulari maerore multavit.</p>
+                    </div>
+                </li>
+
+                <li class="ui-accordion-group">
+                    <button class="panel-heading" aria-expanded="true" attr.aria-controls="panel3" id="tab3">
+                        Title3
+                        <svg>
+                            <use xlink:href="/creamJS/assets/img/icons.svg#arrowDownSvg"></use>
+                        </svg>
+                    </button>
+                    <div class="panel-collapse" aria-hidden="false" id="panel3" aria-labeledby="tab3">
+                        <p>Raptim igitur properantes ut motus sui rumores celeritate nimia praevenirent, vigore corporum
+                            ac levitate confisi per flexuosas semitas ad summitates collium tardius evadebant. et cum
+                            superatis difficultatibus arduis ad supercilia venissent fluvii Melanis alti et verticosi,
+                            qui pro muro tuetur accolas circumfusus, augente nocte adulta terrorem quievere paulisper
+                            lucem opperientes. arbitrabantur enim nullo inpediente transgressi inopino adcursu adposita
+                            quaeque vastare, sed in cassum labores pertulere gravissimos.</p>
+                    </div>
+                </li>
+
+                <li class="ui-accordion-group">
+                    <button class="panel-heading" aria-expanded="false" attr.aria-controls="panel4" id="tab4">
+                        Title4
+                        <svg>
+                            <use xlink:href="/creamJS/assets/img/icons.svg#arrowDownSvg"></use>
+                        </svg>
+                    </button>
+                    <div class="panel-collapse" aria-hidden="true" id="panel4" aria-labeledby="tab4">
+                        <p>Post quorum necem nihilo lenius ferociens</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<p><a href="/creamJS/">← Home</a></p>
+
+      </div>
+    </main>
+
+    <footer class="footerContent">
+      <p> CREAMLIB, <span>Open-Source © 2019</span>, Contributors : Thomas Robbe - Angela Ricci - Johan Bekasinski</p>
+    </footer>
+
+  </div>
+  <script type="text/javascript" src="/creamJS/assets/js/main.js"></script>
+  <script type="text/javascript" src="/creamJS/assets/js/prettify.js"></script>
+  <script type="text/javascript" src="/creamJS/assets/js/classlist-polyfill-IE.js"></script>
+  <script type="text/javascript" src="/creamJS/assets/js/librairie.js"></script>
+</body>
+
+
+</html>

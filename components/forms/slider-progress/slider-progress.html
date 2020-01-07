@@ -43,6 +43,51 @@ layout: layouts/component.njk
                 <span for="slider2" class="output" id="output1">0</span>
             </p>
         </div>
+
+        <div class="explain">
+            <p>Just add the class <em>bubble</em> when calling the <code>ui-slider</code> component
+                to display the <code>output</code> element as a tooltip.</p>
+        </div>
+
+        <!-- CODE SNIPPETS -->
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+                    </li>
+                    <li class="over">
+                        <button id="tab01_02" aria-controls="tab01_02_content">CSS</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+                            <code>
+                                &lt;!-- SLIDER --&gt;
+                                &lt;p class="ui-slider"&gt;
+                                    &lt;label for="slider1"&gt;Choose a value&lt;/label&gt;
+                                    &lt;!-- Input type RANGE --&gt;
+                                    &lt;input type="range" id="slider1" min="0" max="50" step="1" value="25" /&gt;
+                                    &lt;!-- Output for display change value --&gt;
+                                    &lt;span for="slider1" class="output" id="output"&gt;0&lt;/span&gt;
+                                &lt;/p&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" aria-hidden="true" aria-labeledby="tab01_02" id="tab01_02_content">
+                    <div _ngcontent-c18="" class="code">
+                        <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                            .toto &#123;
+                                color: #FFF;
+                            &#125;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="descriptionComponent" id="progress-bar">
@@ -54,6 +99,43 @@ layout: layouts/component.njk
                 <progress id="prog1" name="prog1" max="100" value="30" disabled="disabled"></progress>
             </p>
         </div>
+
+        <!-- CODE SNIPPETS -->
+        <div class="snippets">
+            <div class="tabsContainer">
+                <ul class="buttons-bar">
+                    <li class="over active">
+                        <button id="tab01_01" aria-controls="tab01_01_content">HTML</button>
+                    </li>
+                    <li class="over">
+                        <button id="tab01_02" aria-controls="tab01_02_content">CSS</button>
+                    </li>
+                </ul>
+                <div class="content" aria-hidden="false" aria-labeledby="tab01_01" id="tab01_01_content">
+                    <div class="code">
+                        <!--?prettify lang=html linenums=true?-->
+                        <pre class="prettyprint linenums">
+                            <code>
+                                &lt;!-- PROGRESS BAR --&gt;
+                                &lt;p class="ui-progress-bar"&gt;
+                                    &lt;label for="prog1"&gt;Progress&lt;/label&gt;
+                                    &lt;progress id="prog1" name="prog1" max="100" value="30" disabled="disabled"&gt;&lt;/progress&gt;
+                                &lt;/p&gt;
+                            </code>
+                        </pre>
+                    </div>
+                </div>
+                <div class="content" aria-hidden="true" aria-labeledby="tab02_02" id="tab02_02_content">
+                    <div _ngcontent-c18="" class="code">
+                        <pre _ngcontent-c18="" class="prettyprint linenums prettyprinted" style="">
+                            .toto &#123;
+                                color: #FFF;
+                            &#125;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="descriptionComponent" id="progress-spinner">
@@ -62,17 +144,7 @@ layout: layouts/component.njk
             <!-- PROGRESS SPINNER -->
             <p class="ui-progress-spinner">
                 <svg height="50" width="70" viewBox="0 0 50 50">
-                    <path fill="#45ABBC"
-                        d="M25,5A20,20,0,0,1,44.87,22.72,2.52,2.52,0,0,0,47.36,25h0a2.52,2.52,0,0,0,2.48-2.82,25,25,0,0,0-49.68,0A2.52,2.52,0,0,0,2.64,25h0a2.52,2.52,0,0,0,2.49-2.28A20,20,0,0,1,25,5Z">
-                        <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s"
-                            repeatCount="indefinite" />
-                    </path>
-
-                    <path fill="#6CBE45"
-                        d="M25,36.5A12.07,12.07,0,0,1,13,25.87a1.52,1.52,0,0,0-1.5-1.37h0A1.51,1.51,0,0,0,10,26.19a15.1,15.1,0,0,0,30,0,1.51,1.51,0,0,0-1.5-1.69h0A1.52,1.52,0,0,0,37,25.87,12.07,12.07,0,0,1,25,36.5Z">
-                        <animateTransform attributeName="transform" type="rotate" from="360 25 25" to="0 25 25"
-                            dur="1.5s" repeatCount="indefinite" />
-                    </path>
+                    <use href="{{ '/assets/img/icons.svg#spinner-progress' | url }}" />
                 </svg>
             </p>
         </div>

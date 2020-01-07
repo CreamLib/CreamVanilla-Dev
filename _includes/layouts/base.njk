@@ -46,7 +46,7 @@
               aria-labeledby="itemMenu{{category.data.tags[0]}}">
               <ul class="contenuMenu">
                 {%- for component in collections.components -%}
-                {%- if component.data.tags[1] == category.data.tags[0] %}
+                {%- if (component.data.tags[1] == category.data.tags[0]) or (component.data.tags[1] == category.data.tags[1]) %}
                 <li>
                   <a href="{{ component.url | url }}">{{ component.data.title }}</a>
                 </li>

@@ -11,20 +11,24 @@ layout: layouts/component.njk
 <!-- Component Page Title -->
 <div class="panelTitle">
     <ul>
-        <li><a href="#breadcrumbs">Simple Breadcrumbs</a></li>
+        <li><a href="#skip-invisible">Skip Link (invisible)</a></li>
+        <li><a href="#skip-invisible">Skip Link</a></li>
     </ul>
 </div>
 
 <!-- Component Title -->
 <div class="titleComponent">
-    <div class="descriptionComponent" id="breadcrumbs">
-        <h3>Simple Breadcrumbs</h3>
+    <div class="descriptionComponent" id="skip-invisible">
+        <h3>Skip Link (invisible)</h3>
         <div class="demo">
-            <!-- SIMPLE BREADCRUMBS -->
-            <ol class="ui-breadcrumbs">
-                <li><a href="/"> Home </a></li>
-                <li>Breadcrumbs</li>
-            </ol>
+            <a href="#goToTheBottom1" class="ui-skip hiddenLink">Go to the bottom</a>
+        </div>
+    </div>
+
+    <div class="descriptionComponent" id="skip">
+        <h3>Skip Link</h3>
+        <div class="demo">
+            <a href="#goToTheBottom2" class="ui-skip">Go to the bottom</a>
         </div>
     </div>
 </div>
